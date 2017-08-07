@@ -2,5 +2,11 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-react": "^6.24.1"
-  }
+  },
+  "name": "babel-plugin-react-webpack-hot",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:yachaka/babel-plugin-react-webpack-hot.git",
+  "author": "yachaka <yachaka@gmail.com>",
+  "license": "MIT"
 }
