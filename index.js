@@ -34,10 +34,10 @@ module.exports = function({ types: t }) {
                 t.jSXElement(
                   t.jSXOpeningElement(t.jSXIdentifier('AppContainer'), []),
                   t.jSXClosingElement(t.jSXIdentifier('AppContainer')),
-                  [t.jSXExpressionContainer(path.node.arguments[0])],
+                  [t.jSXExpressionContainer(path.node.arguments[0])]
                 ),
                 path.node.arguments[1],
-              ],
+              ]
             );
             alreadyProcessed.add(renderCallWithAppContainer);
 
@@ -59,15 +59,15 @@ module.exports = function({ types: t }) {
                     t.identifier('AppContainer'),
                     t.memberExpression(
                       t.callExpression(t.identifier('require'), [t.stringLiteral('react-hot-loader')]),
-                      t.identifier('AppContainer'),
-                    ),
+                      t.identifier('AppContainer')
+                    )
                   )]),
 
                   t.variableDeclaration('const', [t.variableDeclarator(
                     renderFunctionIdentifier,
                     t.arrowFunctionExpression([], t.blockStatement([
                       t.expressionStatement(renderCallWithAppContainer),
-                    ])),
+                    ]))
                   )]),
 
                   t.expressionStatement(t.callExpression(renderFunctionIdentifier, [])),
@@ -79,13 +79,13 @@ module.exports = function({ types: t }) {
                       [
                         t.arrayExpression(sources),
                         t.functionExpression(null, [], t.blockStatement([
-                          t.expressionStatement(t.callExpression(renderFunctionIdentifier, []),)
+                          t.expressionStatement(t.callExpression(renderFunctionIdentifier, []))
                         ])),
-                      ],
-                    )),
+                      ]
+                    ))
                   ),
 
-                ]),
+                ])
               ),
               []
             );
