@@ -37,6 +37,6 @@ import MyComponent from './my-path.js';
 })();
 ```
 
-This is useful if you're looking to use `react-hot-loader` and have multiple rendering points thorough your app.
+This is useful if you're looking to use `react-hot-loader` and have multiple rendering points throughout your app.
 
 It's also assuming you're using **webpack 2** import (with babel es2015 modules transpilation deactivated).
